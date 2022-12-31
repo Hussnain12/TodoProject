@@ -1,0 +1,112 @@
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5; }
+
+.fall {
+  transform: translateY(12.8rem) rotateZ(20deg);
+  opacity: 0; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(120deg, #f6d365, #fda085);
+  min-height: 100vh; }
+
+body {
+  font-size: 2.4rem;
+  color: white;
+  font-family: "Poppins", sans-serif; }
+
+.form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .form__input, .form__button {
+    padding: 0.8rem;
+    font-size: 3.2rem;
+    border: none;
+    background-color: #fff; }
+  .form__input {
+    outline: none; }
+  .form__button {
+    color: #fda085;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease; }
+    .form__button:hover {
+      background: #fda085;
+      color: white; }
+  .form__select {
+    margin: 1.6rem;
+    position: relative;
+    overflow: hidden; }
+    .form__select__filter-todo {
+      background-color: #fff;
+      width: 16rem;
+      color: #f6d365;
+      appearance: none;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      cursor: pointer;
+      padding: 1.7rem; }
+    .form__select::after {
+      content: '\25BC';
+      font-size: 1.6rem;
+      position: absolute;
+      background: #fda085;
+      top: 0;
+      right: 0;
+      padding: 1.6rem;
+      pointer-events: none;
+      transition: all 0.3s ease; }
+    .form__select:hover:after {
+      background-color: white;
+      color: #fda085; }
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .todo-container__list {
+    min-width: 30%;
+    list-style: none; }
+  .todo-container__todo {
+    margin: 0.8rem;
+    background: white;
+    color: black;
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease; }
+    .todo-container__todo__item {
+      flex: 1;
+      padding: 0rem 0.5rem; }
+    .todo-container__todo__trash-btn, .todo-container__todo__completed-btn {
+      background: #ff6f47;
+      border: none;
+      color: white;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1.6rem; }
+    .todo-container__todo__completed-btn {
+      background: #2eac14cc; }
+    .todo-container__todo__trash, .todo-container__todo__complete {
+      pointer-events: none; }
+
+.header {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }

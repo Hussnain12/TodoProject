@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <!-- font awesome  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+        <!-- style sheet  -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Todo List</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 class="header__heading heading-1">Hussnain's Todo List</h1>
+        </header>
+        <form class="form">
+            <input type="text" class="form__input">
+            <button class="form__button" type="submit">
+                <i class="fas fa-plus-square form__icon"></i>
+            </button>
+            <div class="form__select">
+                <select name="form__select__todos" class="form__select__filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+
+            </div>
+        </form>
+        <div class="todo-container">
+            <ul class="todo-container__list">
+            </ul>
+        </div>
+
+        <!-- script js     -->
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>

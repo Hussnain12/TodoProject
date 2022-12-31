@@ -1,0 +1,113 @@
+.form {
+    @include header_form;
+
+    &__input,
+    &__button {
+        padding: 0.8rem;
+        font-size: 3.2rem;
+        border: none;
+        background-color: #fff;
+    }
+
+    &__input {
+        outline: none;
+    }
+
+    &__button {
+        color: $gradient-color-2;
+        background: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $gradient-color-2;
+            color: white;
+        }
+    }
+
+    &__select {
+        margin: 1.6rem;
+        position: relative;
+        overflow: hidden;
+
+        &__filter-todo {
+            background-color: #fff;
+            width: 16rem;
+            color: $gradient-color-1;
+            appearance: none;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            cursor: pointer;
+            padding: 1.7rem;
+
+
+        }
+
+        &::after {
+            content: '\25BC';
+            font-size: 1.6rem;
+            position: absolute;
+            background: $gradient-color-2;
+            top: 0;
+            right: 0;
+            padding: 1.6rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        &:hover:after{
+            background-color: white;
+            color:$gradient-color-2;
+        }
+
+        &__filter-todo {}
+    }
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__list {
+        min-width: 30%;
+        list-style: none;
+    }
+
+    &__todo {
+
+        margin: 0.8rem;
+        background: white;
+        color: black;
+        font-size: 2.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s ease;
+
+        &__item {
+            flex: 1;
+            padding: 0rem 0.5rem;
+        }
+
+        &__trash-btn,
+        &__completed-btn {
+            background: $button-colors-1;
+            border: none;
+            color: white;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.6rem;
+        }
+
+        &__completed-btn {
+            background: #2eac14cc;
+        }
+
+        &__trash,
+        &__complete {
+            pointer-events: none;
+        }
+
+    }
+}
